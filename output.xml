@@ -1,0 +1,354 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot rpa="false" generated="20200310 17:29:14.464" generator="Robot 3.2b3.dev1 (Python 2.7.13 on win32)">
+<suite source="F:\XFJ\UI\ArticleQuery.robot" id="s1" name="ArticleQuery">
+<test id="s1-t1" name="打开浏览器并登陆">
+<kw name="Open Browser And Login" library="common">
+<doc>登录工作平台</doc>
+<arguments>
+<arg>${USERCODE}</arg>
+<arg>${USERNAME}</arg>
+<arg>${USERPSW}</arg>
+<arg>${PSW}</arg>
+<arg>${LOGIN_BTN}</arg>
+</arguments>
+<kw name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>${SERVER_URL}</arg>
+<arg>${BROWSER}</arg>
+</arguments>
+<msg timestamp="20200310 17:29:14.684" level="INFO">Opening browser 'chrome' to base url 'http://47.111.8.90:8080/e5workspace/Login.jsp'.</msg>
+<status status="PASS" endtime="20200310 17:29:20.688" starttime="20200310 17:29:14.674"></status>
+</kw>
+<kw name="Maximize Browser Window" library="Selenium2Library">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" endtime="20200310 17:29:21.867" starttime="20200310 17:29:20.689"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>${usercode}</arg>
+<arg>10</arg>
+</arguments>
+<status status="PASS" endtime="20200310 17:29:21.914" starttime="20200310 17:29:21.867"></status>
+</kw>
+<kw name="Clear Element Text" library="Selenium2Library">
+<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
+<arguments>
+<arg>${usercode}</arg>
+</arguments>
+<status status="PASS" endtime="20200310 17:29:21.929" starttime="20200310 17:29:21.914"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${usercode}</arg>
+<arg>${username}</arg>
+</arguments>
+<msg timestamp="20200310 17:29:21.929" level="INFO">Typing text 'fzrb' into text field 'UserCode'.</msg>
+<status status="PASS" endtime="20200310 17:29:21.996" starttime="20200310 17:29:21.929"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${userpassword}</arg>
+<arg>${password}</arg>
+</arguments>
+<msg timestamp="20200310 17:29:21.997" level="INFO">Typing text 'Fzrb123456' into text field 'UserPassword'.</msg>
+<status status="PASS" endtime="20200310 17:29:22.075" starttime="20200310 17:29:21.996"></status>
+</kw>
+<kw name="Click Button" library="Selenium2Library">
+<doc>Clicks the button identified by ``locator``.</doc>
+<arguments>
+<arg>${loginbtn}</arg>
+</arguments>
+<msg timestamp="20200310 17:29:22.075" level="INFO">Clicking button 'login-btn'.</msg>
+<status status="PASS" endtime="20200310 17:29:22.141" starttime="20200310 17:29:22.075"></status>
+</kw>
+<status status="PASS" endtime="20200310 17:29:22.142" starttime="20200310 17:29:14.674"></status>
+</kw>
+<tags>
+<tag>作者：jiangbm</tag>
+<tag>稿件筛选</tag>
+</tags>
+<status status="PASS" endtime="20200310 17:29:22.142" critical="yes" starttime="20200310 17:29:14.674"></status>
+</test>
+<test id="s1-t2" name="定位到app发布库">
+<kw name="Change Tab" library="common">
+<doc>切换tab页</doc>
+<arguments>
+<arg>${FIRST_TAB}</arg>
+</arguments>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>${tab_id}</arg>
+<arg>10</arg>
+</arguments>
+<status status="PASS" endtime="20200310 17:29:24.522" starttime="20200310 17:29:22.145"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${tab_id}</arg>
+</arguments>
+<msg timestamp="20200310 17:29:24.522" level="INFO">Clicking element 'cmainTab'.</msg>
+<status status="PASS" endtime="20200310 17:29:24.608" starttime="20200310 17:29:24.522"></status>
+</kw>
+<status status="PASS" endtime="20200310 17:29:24.609" starttime="20200310 17:29:22.145"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>5</arg>
+</arguments>
+<msg timestamp="20200310 17:29:29.611" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" endtime="20200310 17:29:29.611" starttime="20200310 17:29:24.609"></status>
+</kw>
+<kw name="Change Tab" library="common">
+<doc>切换tab页</doc>
+<arguments>
+<arg>${SECOND_TAB}</arg>
+</arguments>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>${tab_id}</arg>
+<arg>10</arg>
+</arguments>
+<status status="PASS" endtime="20200310 17:29:29.631" starttime="20200310 17:29:29.611"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${tab_id}</arg>
+</arguments>
+<msg timestamp="20200310 17:29:29.641" level="INFO">Clicking element 'subtab_a_capp'.</msg>
+<status status="PASS" endtime="20200310 17:29:30.520" starttime="20200310 17:29:29.631"></status>
+</kw>
+<status status="PASS" endtime="20200310 17:29:30.521" starttime="20200310 17:29:29.611"></status>
+</kw>
+<tags>
+<tag>作者：jiangbm</tag>
+<tag>稿件筛选</tag>
+</tags>
+<status status="PASS" endtime="20200310 17:29:30.521" critical="yes" starttime="20200310 17:29:22.144"></status>
+</test>
+<test id="s1-t3" name="选择栏目">
+<kw name="Select Frame" library="Selenium2Library">
+<doc>Sets frame identified by ``locator`` as the current frame.</doc>
+<arguments>
+<arg>${FRAME}</arg>
+</arguments>
+<msg timestamp="20200310 17:29:30.525" level="INFO">Selecting frame '//*[@id="cappFrm"]/iframe'.</msg>
+<status status="PASS" endtime="20200310 17:29:30.565" starttime="20200310 17:29:30.524"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>5</arg>
+</arguments>
+<msg timestamp="20200310 17:29:35.572" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" endtime="20200310 17:29:35.572" starttime="20200310 17:29:30.565"></status>
+</kw>
+<kw name="Select Column" library="common">
+<doc>选择投稿栏目</doc>
+<arguments>
+<arg>${FATHER_COLID}</arg>
+<arg>${COLID}</arg>
+</arguments>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>${father_colid}</arg>
+</arguments>
+<status status="PASS" endtime="20200310 17:29:35.652" starttime="20200310 17:29:35.572"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${father_colid}</arg>
+</arguments>
+<msg timestamp="20200310 17:29:35.652" level="INFO">Clicking element 'rs_tree_1_span'.</msg>
+<status status="PASS" endtime="20200310 17:29:36.731" starttime="20200310 17:29:35.652"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${colid}</arg>
+</arguments>
+<msg timestamp="20200310 17:29:36.732" level="INFO">Clicking element 'rs_tree_8_span'.</msg>
+<status status="PASS" endtime="20200310 17:29:37.251" starttime="20200310 17:29:36.731"></status>
+</kw>
+<status status="PASS" endtime="20200310 17:29:37.251" starttime="20200310 17:29:35.572"></status>
+</kw>
+<tags>
+<tag>作者：jiangbm</tag>
+<tag>稿件筛选</tag>
+</tags>
+<status status="PASS" endtime="20200310 17:29:37.252" critical="yes" starttime="20200310 17:29:30.523"></status>
+</test>
+<test id="s1-t4" name="按稿件类型筛选">
+<kw name="Select From List By Label" library="Selenium2Library">
+<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
+<arguments>
+<arg>${TYPE_LOCATOR}</arg>
+<arg>专题</arg>
+</arguments>
+<msg timestamp="20200310 17:29:37.259" level="INFO">Selecting options from selection list 'a_type' by label 专题.</msg>
+<status status="PASS" endtime="20200310 17:29:38.187" starttime="20200310 17:29:37.258"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>3</arg>
+</arguments>
+<msg timestamp="20200310 17:29:41.193" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" endtime="20200310 17:29:41.193" starttime="20200310 17:29:38.188"></status>
+</kw>
+<tags>
+<tag>作者：jiangbm</tag>
+<tag>稿件筛选</tag>
+</tags>
+<status status="PASS" endtime="20200310 17:29:41.193" critical="yes" starttime="20200310 17:29:37.255"></status>
+</test>
+<test id="s1-t5" name="按稿件发布时间筛选">
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${PUBLISHTIME_START}</arg>
+</arguments>
+<msg timestamp="20200310 17:29:41.193" level="INFO">Clicking element 'a_pubTime_0'.</msg>
+<status status="PASS" endtime="20200310 17:29:41.298" starttime="20200310 17:29:41.193"></status>
+</kw>
+<kw name="Execute Javascript" library="Selenium2Library">
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<arguments>
+<arg>var s = document.getElementsByClassName("cui_pm icon-arrow-left")[0].click();</arg>
+</arguments>
+<msg timestamp="20200310 17:29:41.301" level="INFO">Executing JavaScript:
+var s = document.getElementsByClassName("cui_pm icon-arrow-left")[0].click();
+Without any arguments.</msg>
+<status status="PASS" endtime="20200310 17:29:41.306" starttime="20200310 17:29:41.299"></status>
+</kw>
+<kw name="Execute Javascript" library="Selenium2Library">
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<arguments>
+<arg>var s = document.getElementsByClassName("cui_dbtn")[0].click();</arg>
+</arguments>
+<msg timestamp="20200310 17:29:41.307" level="INFO">Executing JavaScript:
+var s = document.getElementsByClassName("cui_dbtn")[0].click();
+Without any arguments.</msg>
+<status status="PASS" endtime="20200310 17:29:41.316" starttime="20200310 17:29:41.306"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${PUBLISHTIME_END}</arg>
+</arguments>
+<msg timestamp="20200310 17:29:41.317" level="INFO">Clicking element 'a_pubTime_1'.</msg>
+<status status="PASS" endtime="20200310 17:29:41.419" starttime="20200310 17:29:41.316"></status>
+</kw>
+<kw name="Execute Javascript" library="Selenium2Library">
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<arguments>
+<arg>var s1=document.getElementsByClassName("day")[20].click();</arg>
+</arguments>
+<msg timestamp="20200310 17:29:41.420" level="INFO">Executing JavaScript:
+var s1=document.getElementsByClassName("day")[20].click();
+Without any arguments.</msg>
+<status status="PASS" endtime="20200310 17:29:41.424" starttime="20200310 17:29:41.419"></status>
+</kw>
+<kw name="Execute Javascript" library="Selenium2Library">
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<arguments>
+<arg>var s = document.getElementsByClassName("cui_dbtn")[0].click();</arg>
+</arguments>
+<msg timestamp="20200310 17:29:41.426" level="INFO">Executing JavaScript:
+var s = document.getElementsByClassName("cui_dbtn")[0].click();
+Without any arguments.</msg>
+<status status="PASS" endtime="20200310 17:29:41.431" starttime="20200310 17:29:41.424"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${DOSEARCH}</arg>
+</arguments>
+<msg timestamp="20200310 17:29:41.432" level="INFO">Clicking element 'searchList'.</msg>
+<status status="PASS" endtime="20200310 17:29:42.171" starttime="20200310 17:29:41.432"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>3</arg>
+</arguments>
+<msg timestamp="20200310 17:29:45.175" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" endtime="20200310 17:29:45.175" starttime="20200310 17:29:42.172"></status>
+</kw>
+<tags>
+<tag>作者：jiangbm</tag>
+<tag>稿件筛选</tag>
+</tags>
+<status status="PASS" endtime="20200310 17:29:45.175" critical="yes" starttime="20200310 17:29:41.193"></status>
+</test>
+<test id="s1-t6" name="按稿件ID筛选">
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${ARTCILEID}</arg>
+<arg>${ID}</arg>
+</arguments>
+<msg timestamp="20200310 17:29:45.175" level="INFO">Typing text '5079' into text field 'SYS_DOCUMENTID'.</msg>
+<status status="PASS" endtime="20200310 17:29:45.272" starttime="20200310 17:29:45.175"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${DOSEARCH}</arg>
+</arguments>
+<msg timestamp="20200310 17:29:45.273" level="INFO">Clicking element 'searchList'.</msg>
+<status status="PASS" endtime="20200310 17:29:45.496" starttime="20200310 17:29:45.273"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>3</arg>
+</arguments>
+<msg timestamp="20200310 17:29:48.505" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" endtime="20200310 17:29:48.505" starttime="20200310 17:29:45.497"></status>
+</kw>
+<kw name="Close Browser" library="Selenium2Library">
+<doc>Closes the current browser.</doc>
+<status status="PASS" endtime="20200310 17:29:51.622" starttime="20200310 17:29:48.505"></status>
+</kw>
+<tags>
+<tag>作者：jiangbm</tag>
+<tag>稿件筛选</tag>
+</tags>
+<status status="PASS" endtime="20200310 17:29:51.622" critical="yes" starttime="20200310 17:29:45.175"></status>
+</test>
+<kw type="teardown" name="Run Keyword If Any Tests Failed" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if one or more tests failed.</doc>
+<arguments>
+<arg>Kill Process Chromedriver</arg>
+</arguments>
+<status status="PASS" endtime="20200310 17:29:51.632" starttime="20200310 17:29:51.632"></status>
+</kw>
+<status status="PASS" endtime="20200310 17:29:51.632" starttime="20200310 17:29:14.464"></status>
+</suite>
+<statistics>
+<total>
+<stat fail="0" pass="6">Critical Tests</stat>
+<stat fail="0" pass="6">All Tests</stat>
+</total>
+<tag>
+<stat fail="0" pass="6">作者：jiangbm</stat>
+<stat fail="0" pass="6">稿件筛选</stat>
+</tag>
+<suite>
+<stat fail="0" id="s1" name="ArticleQuery" pass="6">ArticleQuery</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
